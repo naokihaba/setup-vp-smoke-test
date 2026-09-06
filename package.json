@@ -1,0 +1,7 @@
+{
+  "name": "setup-vp-smoke-test",
+  "private": true,
+  "scripts": {
+    "smoke": "vp --version"
+  }
+}

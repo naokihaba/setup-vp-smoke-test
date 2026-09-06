@@ -20,6 +20,7 @@ jobs:
       - name: Verify Vite+
         run: |
           vp --version
+          vp run smoke
           echo "setup output: ${{ steps.setup.outputs.version }}"
 
   latest-release:
@@ -35,4 +36,5 @@ jobs:
       - name: Verify Vite+
         run: |
           vp --version
+          vp run smoke
           echo "setup output: ${{ steps.setup.outputs.version }}"

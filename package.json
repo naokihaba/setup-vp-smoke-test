@@ -2,6 +2,9 @@
   "name": "setup-vp-smoke-test",
   "private": true,
   "scripts": {
-    "smoke": "vp --version"
+    "smoke": "node -e \"console.log('project smoke passed')\""
+  },
+  "devDependencies": {
+    "vite-plus": "0.3.0"
   }
 }

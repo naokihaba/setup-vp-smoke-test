@@ -7,22 +7,6 @@ permissions:
   contents: read
 
 jobs:
-  frozen-major-tag:
-    name: v1 on ubuntu-latest
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - uses: actions/checkout@v6
-      - id: setup
-        uses: voidzero-dev/setup-vp@v1
-        with:
-          node-version: lts
-      - name: Verify Vite+
-        run: |
-          vp --version
-          vp run smoke
-          echo "setup output: ${{ steps.setup.outputs.version }}"
-
   latest-release:
     name: v1.19.0 on ubuntu-latest
     runs-on: ubuntu-latest

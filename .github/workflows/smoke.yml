@@ -24,3 +24,20 @@ jobs:
           vp --version
           vp run smoke
           echo "setup output: ${{ steps.setup.outputs.version }}"
+
+  legacy-vite-plus:
+    name: v1.19.0 installing Vite+ 0.1.11
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - id: setup
+        uses: voidzero-dev/setup-vp@v1.19.0
+        with:
+          version: 0.1.11
+          node-version: lts
+          run-install: false
+      - name: Verify Vite+
+        run: |
+          vp --version
+          test "${{ steps.setup.outputs.version }}" = "0.1.11"

@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: lts
           cache: true
-          cache-save: false
+          cache-save: true
       - name: Verify Vite+
         run: |
           vp --version
